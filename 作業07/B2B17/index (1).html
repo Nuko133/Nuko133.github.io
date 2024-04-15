@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-	<meta charset="UTF-8">
-		<title>B2B17 課堂作業07</title>
+    <meta charset="UTF-8">
+    <title>B2B17 課堂作業07</title>
     <style>
         #form02 {
             color:red;
@@ -18,7 +18,7 @@
 
         button {
             padding: 10px 20px;
-            font-size:16px
+            font-size:16px;
             border: none;
             border-radius: 5px;
             cursor:pointer;
@@ -55,7 +55,7 @@
              text01 += "<input type=\"text\">" + "<br>";
         }
         text01 += "</form>" + "<br>";
-        text01 += "<button class+\"btn02\" onclick=\"stat()\">計算統計量</button>";
+        text01 += "<button class=\"btn02\"onclick=\"stat()\">計算統計量</button>";
         document.getElementById("demo01").innerHTML = text01;
     }
     function stat() {
@@ -64,13 +64,14 @@
         var sum01 = 0;
         var text02 = "";
         for ( i = 0; i < no; i++) {
-             sum += Number(y.elements[i].value};
+             sum += Number(y.elements[i].value);
              sum01 += Math.pow(Number(y.elements[i].value), 2);
              text02 += "第" + (i + 1) + "個數值為" + y.elements[i].value + "<br>";
         }
-    text02 += "<h4>平均數= " + sum / no + "<h4>";
-    text02 += "<h4>標準差= " + Math.sqrt((sum01 - sum * sim / no ) / (no - 1)) + "<h4>";
-    document.getElementById("demo02").innerHTML = text02;
+        text02 += "<h4>平均數= " + sum / no + "</h4>";
+        text02 += "<h4>標準差= " + Math.sqrt((sum01 - (sum * sum) / no ) / (no - 1)) + "</h4>";
+        document.getElementById("demo02").innerHTML = text02;
+    }
 </script>
 </body>
 </html>
